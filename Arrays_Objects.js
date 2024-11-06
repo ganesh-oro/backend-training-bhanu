@@ -28,3 +28,31 @@ function builtin(arr){
 let res2 = builtin(arr)
 console.log(res2);
 
+
+//map
+
+const arr22 = [1,2,3,4];
+
+const res11 = arr22.map((num)=>{
+    return num*num;
+})
+
+console.log(res11);
+
+// filter
+const arr2 = [2,4,3,6]
+
+const res22 = arr2.filter((num)=>{
+    return num%2===0;
+})
+
+console.log(res22);
+ 
+
+//reduce
+
+const red = arr2.reduce((a,b)=>{
+    return a+b;
+})
+
+console.log(red);
