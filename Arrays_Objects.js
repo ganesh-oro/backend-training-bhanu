@@ -1,58 +1,83 @@
-let arr1 = ['a','b','c']
+// let arr1 = ['a','b','c']
 
-//console.log(arr.length)
+const { off } = require("process");
 
-arr1.push('d')
+// //console.log(arr.length)
 
-//console.log(arr.length)
+// arr1.push('d')
 
-function findmax(arr){
-    let max = arr[0]
-    for(let i=0;i<arr.length;i++){
-        if (arr[i] > max) {
-            max = arr[i];
-        }
+// //console.log(arr.length)
 
-    }
-    return max;
-}
+// function findmax(arr){
+//     let max = arr[0]
+//     for(let i=0;i<arr.length;i++){
+//         if (arr[i] > max) {
+//             max = arr[i];
+//         }
 
-let arr = [2,3,1,5,3];
+//     }
+//     return max;
+// }
 
-let res = findmax(arr);
+// let arr = [2,3,1,5,3];
 
-function builtin(arr){
-    return Math.max(...arr);
-}
+// let res = findmax(arr);
 
-let res2 = builtin(arr)
-console.log(res2);
+// function builtin(arr){
+//     return Math.max(...arr);
+// }
+
+// let res2 = builtin(arr)
+// console.log(res2);
 
 
-//map
+// //map
 
-const arr22 = [1,2,3,4];
+// const arr22 = [1,2,3,4];
 
-const res11 = arr22.map((num)=>{
-    return num*num;
-})
+// const res11 = arr22.map((num)=>{
+//     return num*num;
+// })
 
-console.log(res11);
+// console.log(res11);
 
-// filter
-const arr2 = [2,4,3,6]
+// // filter
+// const arr2 = [2,4,3,6]
 
-const res22 = arr2.filter((num)=>{
-    return num%2===0;
-})
+// const res22 = arr2.filter((num)=>{
+//     return num%2===0;
+// })
 
-console.log(res22);
+// console.log(res22);
  
 
-//reduce
+// //reduce
 
-const red = arr2.reduce((a,b)=>{
-    return a+b;
-})
+// const red = arr2.reduce((a,b)=>{
+//     return a+b;
+// })
 
-console.log(red);
+// console.log(red);
+
+
+let str = "Bhanuchandar";
+let text ="";
+for(x of str){
+    text+=x+" ";
+}
+
+let a = ['fruits','bis','choc'];
+let result ="";
+for(x in a){
+    result+=a[x]+" "
+}
+
+let obj = {name:"Bhanu",age:22};
+function square(){
+    return s.length
+}
+// let response = a.forEach();
+//console.log(text);
+console.log(result);
+
+// console.log(response);
