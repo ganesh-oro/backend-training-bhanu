@@ -1,3 +1,7 @@
-let tut = require('./tutorial');
+let x = Math.random()*9000+1000;
 
-console.log(tut);
+console.log(Math.floor(x));
+
+// process.env.USER
+
+

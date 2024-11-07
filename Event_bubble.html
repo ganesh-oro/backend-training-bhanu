@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling Example</title>
+</head>
+<body>
+  <div id="grandparent" style="padding: 20px; background-color: lightblue;">
+    Grandparent
+    <div id="parent" style="padding: 20px; background-color: lightgreen;">
+      Parent
+      <button id="child" style="padding: 10px;">Click Me</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("grandparent").addEventListener("click", function() {
+      alert("Grandparent div clicked!");
+    });
+
+    document.getElementById("parent").addEventListener("click", function() {
+      alert("Parent div clicked!");
+    });
+
+    document.getElementById("child").addEventListener("click", function() {
+      alert("Button clicked!");
+      event.stopPropagation(); // Uncomment this to prevent bubbling
+    });
+  </script>
+</body>
+</html>
