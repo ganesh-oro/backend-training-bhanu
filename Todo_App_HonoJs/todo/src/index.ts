@@ -6,13 +6,15 @@ import { serve } from "@hono/node-server";
 const app = new Hono();
 const todos = new Hono();
 
-interface Todo{
-  id : string | number,
-  title : string,
-  completed : boolean
-};
+
+interface Todo {
+  id: string | number;
+  title: string;
+  completed: boolean;
+}
 
 const todo_list: Todo[] = [];
+
 app.get('/',(c)=>{
   return c.text('Welcome to Hono!');
 })
