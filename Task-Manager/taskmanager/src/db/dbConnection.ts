@@ -3,6 +3,9 @@ import { drizzle } from 'drizzle-orm/node-postgres';
 import pg from 'pg';
 import fs from 'fs';
 const { Pool } = pg;
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Use DATABASE_URL directly
 const pool = new Pool({

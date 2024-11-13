@@ -8,6 +8,13 @@
       "when": 1731306616263,
       "tag": "0000_perpetual_champions",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1731385556294,
+      "tag": "0001_rapid_romulus",
+      "breakpoints": true
     }
   ]
 }
