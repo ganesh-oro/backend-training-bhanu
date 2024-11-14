@@ -14,9 +14,14 @@ app.route('/auth',authrouter);
 //   }
 // })
 
-app.onError((e, c) => {
-  // console.error(`${err}`)
-  return c.json({ error: e.message }, 500)
+app.onError((error:any, c) => {
+  c.status(error.status || 500);
+   return c.json({
+    success:false,
+    message: error.message || 'Internal Server Error', //if u get 500 you are the worst person on earth
+    statusCode: error.status || 500,
+    errorData: error.errData
+  });
 })
 
 const port = 3000;

@@ -22,8 +22,7 @@ export const sendEmail = async(email:string,token:string)=>{
           Reset Password
         </a>
         <p>If you did not request a password reset, please ignore this email.</p>
-        <p>Thanks,</p>
-`
+        <p>Thanks,</p>`
     }
     try{
         await transporter.sendMail(mailOptions)
