@@ -1,7 +1,6 @@
 import type { Context } from "hono";
 import { db } from "../db/dbConnection.ts"
 import { users } from "../db/schemas/user.ts";
-import bcrypt from 'bcrypt';
 import {eq} from 'drizzle-orm';
 
 export const authservice = {
@@ -11,14 +10,18 @@ export const authservice = {
     searchOne:async(email:string)=>{
         return await db.select().from(users).where(eq(users.email,email));
     },
-    searchPassword:async(email:string)=>{
-        const password2 = await db.select({password:users.password}).from(users).where(eq(users.email,email));        // const isPasswordMatch = await bcrypt.compare(password,password2);
-        return password2;
+    // searchPassword:async(email:string)=>{
+    //     const password2 = await db.select({password:users.password}).from(users).where(eq(users.email,email));        // const isPasswordMatch = await bcrypt.compare(password,password2);
+    //     return password2;
         
-    },
+    // },
     deleteOne:async(email:string)=>{
         return await db.delete(users).where(eq(users.email,email));
-    }
-
-
+    },
+    updateOne:async(email:string,body:any)=>{
+        return await db.update(users).set({...body}).where(eq(users.email,email)).returning();
+    },
+    updatePassword:async(email:string,password:string)=>{
+        return await db.update(users).set({password}).where(eq(users.email,email)).returning();
+    },
 }

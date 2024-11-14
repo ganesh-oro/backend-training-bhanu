@@ -17,3 +17,13 @@ export const SuccessmsgLogin = (c:Context,msg:string,status:number,Token:any)=>{
         Token
     })
 }
+export const successMsg = (c:Context,msg:string,status:number)=>{
+    return c.json({
+        success:true,
+        status,
+        msg
+    }
+)
+
+}
+

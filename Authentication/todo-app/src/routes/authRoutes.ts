@@ -5,5 +5,9 @@ export const authrouter = new Hono();
 
 authrouter.post('/login',authController.login);
 authrouter.post('/signup',authController.signup);
-authrouter.post('/profile',authController.showProfile);
-
+authrouter.get('/profile',authController.showProfile);
+authrouter.delete('/profile',authController.deleteProfile);
+authrouter.put('/profile',authController.updateProfile);
+authrouter.patch('/profile/updatepassword',authController.updatePassword);
+authrouter.post('/forgotpassword',authController.forgotPassword);
+authrouter.post('/reset-password/:token',authController.resetPassword);
