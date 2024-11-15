@@ -7,23 +7,5 @@ export const SendSuccessMsg = (c: Context, msg: string, status: number, data?: a
         msg,
         data
     })
-}
-
-export const SuccessmsgLogin = (c:Context,msg:string,status:number,Token:any)=>{
-    return c.json({
-        success:true,
-        status,
-        msg,
-        Token
-    })
-}
-export const successMsg = (c:Context,msg:string,status:number)=>{
-    return c.json({
-        success:true,
-        status,
-        msg
-    }
-)
-
-}
+};
 
