@@ -5,12 +5,13 @@ import UnproccesableEntityException from "../exceptions/unproccesbleEntityExcept
 
 export const validate = async (schema:any, data: any) => {
     
-    const validatedData = await safeParse(schema, data, { abortPipeEarly: true });
+    const validatedData = safeParse(schema, data, { abortPipeEarly: true });
 
     if (validatedData.success) {
         return validatedData.output;
-    } else {
-        const errorData = flatten(validatedData.issues);
+    }
+    else {
+       const errorData = flatten(validatedData.issues);
        throw new UnproccesableEntityException('validation failed',errorData.nested);
     }
 }

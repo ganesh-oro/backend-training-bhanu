@@ -3,11 +3,12 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "generate": "npx drizzle-kit generate",
+    "migrations:gen": "npx drizzle-kit generate",
     "migrations:apply": "npx drizzle-kit migrate",
     "studio": "npx drizzle-kit studio"
   },
   "dependencies": {
+    "@getbrevo/brevo": "^2.2.0",
     "@hono/node-server": "^1.13.7",
     "@hono/valibot-validator": "^0.5.1",
     "bcrypt": "^5.1.1",
