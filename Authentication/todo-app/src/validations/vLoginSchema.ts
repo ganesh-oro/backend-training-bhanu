@@ -1,4 +1,4 @@
-import { object, type InferOutput} from 'valibot'
+import {object, type InferOutput} from 'valibot'
 import { PasswordSchema } from './vPasswordSchema.ts';
 import { EmailSchema } from './vEmailSchema.ts';
 

@@ -1,12 +1,8 @@
 import { flatten, safeParse } from "valibot";
 import UnproccesableEntityException from "../exceptions/unproccesbleEntityException.ts";
 
-
-
-export const validate = async (schema:any, data: any) => {
-    
-    const validatedData = safeParse(schema, data, { abortPipeEarly: true });
-
+export const validate = async (schema:any, data: any) => {  
+    const validatedData = safeParse(schema, data);
     if (validatedData.success) {
         return validatedData.output;
     }

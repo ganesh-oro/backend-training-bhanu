@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 export default defineConfig({
     dialect: 'postgresql',
-    out: './migratedSchemas',
-    schema:"./src/db/schemas/*.ts",
+    out: './Drizzle',
+    schema:"./src/db/schema/*.ts",
     dbCredentials: {
         host: process.env.HOST as string,
         port: process.env.PORT ? parseInt(process.env.PORT): 5432,

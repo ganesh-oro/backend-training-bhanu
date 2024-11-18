@@ -29,6 +29,34 @@
       "when": 1731639642847,
       "tag": "0003_loose_paladin",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1731739494020,
+      "tag": "0004_real_nicolaos",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1731739584893,
+      "tag": "0005_quick_dormammu",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1731739659375,
+      "tag": "0006_pink_nebula",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1731740164018,
+      "tag": "0007_nostalgic_paladin",
+      "breakpoints": true
     }
   ]
 }
